@@ -1,0 +1,35 @@
+<div class="card h-100">
+  <div class="card-header bg-success text-white">
+    <div class="row">
+      <div class="col-4">
+        <span>Customers Registration History</span>
+      </div>
+      <div class="col-1">
+        <input
+          class="btn btn-primary"
+          type="button"
+          value="Get"
+          (click)="evtGetLatestRecords()"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of CustomerRecords; let index = index">
+          <td>{{ index + 1 }}</td>
+          <td>{{ record.Name }}</td>
+          <td>{{ record.Email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
