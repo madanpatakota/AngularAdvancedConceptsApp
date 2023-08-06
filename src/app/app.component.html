@@ -5,6 +5,7 @@
       <span class="text-info col-2">
         Customer Name :
         <span class="text-monospace fs-5"> {{ Customer.Name }}</span>
+        <input type="button" class="btn btn-primary" value="Click" (click)="updateCustomerName()" />
       </span>
       <span class="text-info col-3">
         Customer Password :
@@ -27,6 +28,7 @@
           id="message"
           rows="4"
           placeholder="Enter your personal details"
+          #CustomerMessage
         ></textarea>
       </app-customer-registration>
     </div>

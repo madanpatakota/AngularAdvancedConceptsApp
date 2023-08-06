@@ -17,4 +17,8 @@ export class AppComponent {
     console.log(this.Customer);
     this.CustomerLatestRecord = $event;
   }
+
+  updateCustomerName(){
+     this.Customer.Name = "Robert Jr";
+  }
 }

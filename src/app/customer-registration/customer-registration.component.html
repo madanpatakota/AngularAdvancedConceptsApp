@@ -12,7 +12,7 @@
             class="form-control"
             id="name"
             placeholder="Enter your name"
-            [value] = "CustomerInfo.Name"
+            [value] = "localCustomerInfo.Name"
             #CustomerName
           />
         </div>
@@ -25,7 +25,7 @@
             class="form-control"
             id="email"
             placeholder="Enter your email"
-            [value]="CustomerInfo.Email"
+            [value]="localCustomerInfo.Email"
             #CustomerEmail
           />
         </div>
@@ -38,16 +38,19 @@
             class="form-control"
             id="password"
             placeholder="Enter your Password"
-            [value]="CustomerInfo.Password"
+            [value]="localCustomerInfo.Password"
             #CustomerPassword
           />
         </div>
       </div>
-      <!-- <div class="mb-3 row">
+
+      <!--ngContentSetup-->
+      <div class="mb-3 row">
         <label for="message" class="col-sm-3 col-form-label">Message</label>
         <div class="col-sm-9">
+          <ng-content></ng-content>
         </div>
-      </div> -->
+      </div>
       <div class="row">
         <div class="col-sm-9 offset-sm-3">
           <input type="button" value="Post" (click)="evtPostData()" class="btn btn-primary btn-block"> |
