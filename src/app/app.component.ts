@@ -6,7 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'AngularAdvancedConceptsApp';
+  title = 'AngularDataCommunicationApp';
 
   Customer = { Name: 'Robert', Email: 'Robert@gmail.com', Password: '!@&&*9*' };
 
