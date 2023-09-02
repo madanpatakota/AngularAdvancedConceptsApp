@@ -1,23 +1,46 @@
+<!--Main Page-->
 <div class="container">
+  <!--Main page Heading section-->
   <div class="row mt-4">
     <h3>Customer Page</h3>
     <div class="row mt-4">
-      <span class="text-info col-2">
-        Customer Name :
-        <span class="text-monospace fs-5"> {{ Customer.Name }}</span>
-        <input type="button" class="btn btn-primary" value="Click" (click)="updateCustomerName()" />
-      </span>
-      <span class="text-info col-3">
-        Customer Password :
-        <span class="text-monospace fs-5"> {{ Customer.Password }}</span>
-      </span>
-      <span class="text-info col-3">
-        Customer Email :
-        <span class="text-monospace fs-5"> {{ Customer.Email }}</span>
-      </span>
+      <div class="col-5">
+        <div class="row">
+          <div class="col-6">
+            <span class="text-info">
+              Customer Name :
+              <span class="text-monospace fs-5"> {{ Customer.Name }}</span>
+            </span>
+          </div>
+          <div class="col-2">
+            <input
+              type="button"
+              class="btn btn-primary"
+              value="Click"
+              (click)="updateCustomerName()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <span class="text-info col-3">
+          Customer Password :
+          <span class="text-monospace fs-5"> {{ Customer.Password }}</span>
+        </span>
+      </div>
+      <div class="col-3">
+        <span class="text-info col-3">
+          Customer Email :
+          <span class="text-monospace fs-5"> {{ Customer.Email }}</span>
+        </span>
+      </div>
     </div>
   </div>
+
+  <!--Customer Registration page and Customer Registration Latest Record-->
   <div class="row mt-4">
+    
+    <!--Customer Registration page-->
     <div class="col-md-5">
       <app-customer-registration
         [CustomerInfo]="Customer"
@@ -32,16 +55,26 @@
         ></textarea>
       </app-customer-registration>
     </div>
+
     <div class="col-md-1"></div>
+
+    <!--Customer Registration Latest Record-->
     <div class="col-md-5">
       <app-customer-details
         [CustomerRecord]="CustomerLatestRecord"
       ></app-customer-details>
     </div>
+
   </div>
+
+
+  <!--Customer Registration History-->
   <div class="row justify-content-center mt-5">
     <div>
-      <app-customers-registration-history [CustomerRecord]="CustomerLatestRecord"></app-customers-registration-history>
+      <app-customers-registration-history
+        [CustomerRecord]="CustomerLatestRecord"
+      ></app-customers-registration-history>
     </div>
   </div>
+
 </div>
