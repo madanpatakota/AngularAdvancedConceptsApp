@@ -46,9 +46,11 @@ export class CustomerRegistrationComponent
     //this.localCustomerInfo = updatedObject;
     //this.changeDector.detectChanges();
 
+    /*Changing the input value from its parent(app.component)*/
     this.localCustomerInfo = {
       Name: 'Peter',
     };
+
     console.log('ngOnchanges changes are loaded');
   }
 

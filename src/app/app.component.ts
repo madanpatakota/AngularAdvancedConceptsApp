@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,8 @@ export class AppComponent {
 
   CustomerLatestRecord = {};
 
+  @ViewChild('customerName') vCustomerName : ElementRef<any>;
+
   evtCustomerReceiveInfo($event: any) {
     this.Customer = $event;
     console.log(this.Customer);
@@ -19,6 +21,8 @@ export class AppComponent {
   }
 
   updateCustomerName(){
-     this.Customer.Name = "Robert Jr";
+     //this.Customer.Name = this.vCustomerName.nativeElement.value;
+     //this.Customer = this.Customer;
+     this.Customer = { ...this.Customer,  "Name" : this.vCustomerName.nativeElement.value };
   }
 }
