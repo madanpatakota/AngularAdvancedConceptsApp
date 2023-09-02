@@ -80,6 +80,7 @@ export class CustomerRegistrationComponent
       Name: this.vCustomerName.nativeElement.value,
       Email: this.vCustomerEmail.nativeElement.value,
       Password: this.vCustomerPassword.nativeElement.value,
+      Message : this.cCustomerMessage.nativeElement.value
     });
   }
 
