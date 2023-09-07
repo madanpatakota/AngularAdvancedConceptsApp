@@ -38,6 +38,9 @@ export class CustomerRegistrationComponent {
   @ViewChild('CustomerPassword') vCustomerPassword: ElementRef;
 
   evtPostData() {
+
+    /* In event emitter i have taken any type so that i can pass any value like number , boolean , object , array 
+       As of now i am taking the object */
     this.customerEmitter.emit({
       Name: this.vCustomerName.nativeElement.value,
       Email: this.vCustomerEmail.nativeElement.value,

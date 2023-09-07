@@ -10,11 +10,15 @@ export class AppComponent {
 
   Customer = { Name: 'Robert', Email: 'Robert@gmail.com', Password: '!@&&*9*' };
 
+  
+  /* Prepare this object for send the data to the customer details component and customer history component*/
   CustomerLatestRecord = {};
 
   evtCustomerReceiveInfo($event: any) {
     this.Customer = $event;
     console.log(this.Customer);
+
+    /* referring the latest record from $event*/
     this.CustomerLatestRecord = $event;
   }
 }

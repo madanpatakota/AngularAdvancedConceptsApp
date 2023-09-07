@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./customers-registration-history.component.css'],
 })
 export class CustomersRegistrationHistoryComponent {
-  @Input('CustomerRecord') CustomerRecord: any = {};
+  @Input('CustomerRecord') CustomerRecord: any ;
 
   CustomerRecords: any = [];
   evtGetLatestRecords() {
