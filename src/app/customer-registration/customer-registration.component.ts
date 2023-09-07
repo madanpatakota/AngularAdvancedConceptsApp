@@ -13,11 +13,23 @@ import {
   styleUrls: ['./customer-registration.component.css'],
 })
 export class CustomerRegistrationComponent {
+
+  /*Output decorator which is  for takes the data from parent*/
   @Input('CustomerInfo') CustomerInfo: any;
 
   evtClearData() {
     this.CustomerInfo = { Name: '', Email: '', Password: '' };
   }
+
+  /*Output decorator which is for sends the data to the parent*/
+
+  /*
+     1. who will be take care generally prepare the data for send 
+     Ans : Event emitter 
+     2. What is event emitter ?
+     Ans : Which is for emits | inject |  the data into it  
+           So that  what ever we are having the injected data in the eventemitter , we can refer that data to the output 
+  */
 
   @Output('CustomerEventEmitter') customerEmitter = new EventEmitter<any>();
 
