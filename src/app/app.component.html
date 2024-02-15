@@ -1,7 +1,8 @@
 <div class="container">
-  <div class="row mt-4">
+  <div class="mt-4">
     <h6 class="display-6">Customer Page</h6>
-    <div class="row mt-4 p-3 bg-dark text-light">
+    <div class="mt-4 p-3 bg-dark text-light">
+      <div class="row">
       <span class="col-3">
         Customer Name :
         <span class="text-monospace fs-5"> {{ Customer.Name }}</span>
@@ -16,10 +17,12 @@
       </span>
     </div>
   </div>
+  </div>
 
   <!--
       1.What is $event contains here ?
       Ans : It contains the data which is emitted | injected by event emitter 
+            Note : As of now we are fetching the data from Customerregistration component.
       2. How to configure the variable which is decorated by output ?
       Ans : Based on the event based syntax
       3. How to configure the variable which is decorated by input ?
@@ -27,7 +30,7 @@
   -->
 
   <div class="row mt-4">
-    <div class="col-md-5">
+    <div class="col-md-6">
       <app-customer-registration
         [CustomerInfo]="Customer"
         (CustomerEventEmitter)="evtCustomerReceiveInfo($event)"
@@ -40,8 +43,8 @@
         ></textarea>
       </app-customer-registration>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-5">
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-6">
       <app-customer-details
         [CustomerRecord]="CustomerLatestRecord"
       ></app-customer-details>

@@ -14,6 +14,7 @@ export class AppComponent {
   /* Prepare this object for send the data to the customer details component and customer history component*/
   CustomerLatestRecord = {};
 
+  
   evtCustomerReceiveInfo($event: any) {
     this.Customer = $event;
     console.log(this.Customer);
