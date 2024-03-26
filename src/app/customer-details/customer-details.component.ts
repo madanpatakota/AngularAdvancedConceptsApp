@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class CustomerDetailsComponent {
 
+  //Taking the record from Parent of CustomerDetailsComponent
+  //In this scenerio parent Component is Appcomponent.
   @Input('CustomerRecord') CustomerRecord:any;
 
 }

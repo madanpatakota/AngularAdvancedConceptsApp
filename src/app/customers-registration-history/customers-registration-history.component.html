@@ -1,12 +1,13 @@
 <div class="card h-100">
   <div class="card-header bg-success text-white">
     <div class="row">
-      <div class="row col-8 text-center mt-1">
-        <span class="mr-5">Customers Registration History</span>
+      <div class="col-8 mt-1">
+        <span class="text-right">Customers Registration History</span>
       </div>
-      <div class="col-1">
+      <div class="col-2"></div>
+      <div class="col-1 text-right">
         <input
-          class="btn btn-primary"
+          class="btn btn-info text-white"
           type="button"
           value="Get All Records"
           (click)="evtGetLatestRecords()"
@@ -25,6 +26,7 @@
         </tr>
       </thead>
       <tbody>
+        <!-- here we are capturing the index of the element while looping......-->
         <tr *ngFor="let record of CustomerRecords; let index = index">
           <td>{{ index + 1 }}</td>
           <td>{{ record.Name }}</td>

@@ -1,7 +1,7 @@
 <!--Main Page-->
 <div class="container" style="margin-bottom: 50em;">
   <!--Main page Heading section-->
-  <div class="row m-2">
+  <div class="m-2">
     <h6 class="display-6">Customer Page</h6>
     <div class="row mt-4 p-3 bg-dark text-light">
       <div class="col-5">
@@ -39,7 +39,7 @@
   <!--Customer Registration page and Customer Registration Latest Record-->
   <div class="row mt-5">
     <!--Customer Registration page-->
-    <div class="col-md-5">
+    <div class="col-md-6">
       <app-customer-registration
         [CustomerInfo]="Customer"
         (CustomerEventEmitter)="evtCustomerReceiveInfo($event)"
@@ -54,10 +54,10 @@
       </app-customer-registration>
     </div>
 
-    <div class="col-1"></div>
+    <!-- <div class="col-1"></div> -->
 
     <!--Customer Registration Latest Record-->
-    <div class="col-md-5">
+    <div class="col-md-6">
       <app-customer-details
         [CustomerRecord]="CustomerLatestRecord"
       ></app-customer-details>
